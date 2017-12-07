@@ -6,7 +6,7 @@ import { UserShipping } from '../models/user-shipping';
 @Injectable()
 export class ShippingService {
 
-  private serverPath = AppConst.serverPath;
+  public serverPath = AppConst.serverPath;
   
   constructor(private http: Http) { }
   

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class LoginService {
 
-  private serverPath = AppConst.serverPath;
+  public serverPath = AppConst.serverPath;
   
   
   constructor(private http: Http, private router: Router) { }

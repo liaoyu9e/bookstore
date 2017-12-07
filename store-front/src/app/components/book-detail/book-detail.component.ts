@@ -13,14 +13,14 @@ import { AppConst } from '../../constants/app-const';
 })
 export class BookDetailComponent implements OnInit {
 
-  private serverPath = AppConst.serverPath;
-  private book: Book = new Book();
-  private bookId: number;
-  private numberList = [1,2,3,4,5,6,7,8,9];
-  private qty:number;
+  public serverPath = AppConst.serverPath;
+  public book: Book = new Book();
+  public bookId: number;
+  public numberList = [1,2,3,4,5,6,7,8,9];
+  public qty:number;
   
-  private addBookSuccess: boolean = false;
-  private notEnoughStock: boolean = false;
+  public addBookSuccess: boolean = false;
+  public notEnoughStock: boolean = false;
   
   constructor(private bookService: BookService, private cartService: CartService, private http: Http, private router: Router, private route: ActivatedRoute) { }
 

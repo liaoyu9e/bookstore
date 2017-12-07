@@ -11,21 +11,21 @@ import { UserService } from '../../services/user.service';
 })
 export class MyAccountComponent implements OnInit {
 
-  private serverPath = AppConst.serverPath;
-  private loginError: boolean;
-  private loggedIn = false;
-  private credential = {'username':'', 'password':''};
+  public serverPath = AppConst.serverPath;
+  public loginError: boolean;
+  public loggedIn = false;
+  public credential = {'username':'', 'password':''};
   
-  private emailSent = false;
-  private usernameExists: boolean;
-  private emailExists: boolean;
+  public emailSent = false;
+  public usernameExists: boolean;
+  public emailExists: boolean;
   
-  private recoverEmail: string;
-  private emailNotExists: boolean;
-  private forgetPasswordEmailSent: boolean;
+  public recoverEmail: string;
+  public emailNotExists: boolean;
+  public forgetPasswordEmailSent: boolean;
   
-  private username: string;
-  private email: string;
+  public username: string;
+  public email: string;
   
   
   constructor(private loginService: LoginService, private userService:UserService, private router: Router) { }

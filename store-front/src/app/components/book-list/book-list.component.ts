@@ -16,9 +16,9 @@ import { Subject } from 'rxjs/Subject';
 })
 export class BookListComponent implements OnInit, AfterViewInit {
 
-  private selectedBook: Book;
-  private bookList: Book[];
-  private serverPath = AppConst.serverPath;
+  public selectedBook: Book;
+  public bookList: Book[];
+  public serverPath = AppConst.serverPath;
   // pageEvent: PageEvent;
   // @ViewChild(MatPaginator) paginator: MatPaginator;
   // pageSize = 10;
@@ -26,7 +26,7 @@ export class BookListComponent implements OnInit, AfterViewInit {
   // length: number;
   public dtTrigger: Subject<any> = new Subject();
   @ViewChild(DataTableDirective) dtElement: DataTableDirective;
-  // private dtOptions: DataTables.Settings = {};
+  // dtOptions: DataTables.Settings = {};
   
   
   constructor(private bookService: BookService, private http: Http, private router: Router, private route: ActivatedRoute) { }

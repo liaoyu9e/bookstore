@@ -6,7 +6,7 @@ import { UserPayment } from '../models/user-payment';
 @Injectable()
 export class PaymentService {
 
-  private serverPath = AppConst.serverPath;
+  public serverPath = AppConst.serverPath;
   
   constructor(private http: Http) { }
   

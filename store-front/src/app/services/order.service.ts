@@ -6,7 +6,7 @@ import { Order } from '../models/order';
 @Injectable()
 export class OrderService {
 
-  private serverPath = AppConst.serverPath;
+  public serverPath = AppConst.serverPath;
   
   constructor(private http: Http) { }
   

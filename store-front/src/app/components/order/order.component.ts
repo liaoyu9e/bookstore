@@ -20,30 +20,30 @@ import { CheckoutService } from '../../services/checkout.service';
 })
 export class OrderComponent implements OnInit {
 
-  private serverPath = AppConst.serverPath;
-  private yearList = AppConst.yearList;
-  private stateList: string[] = Object.keys(AppConst.usStates);
-  private selectedBook: Book;
+  public serverPath = AppConst.serverPath;
+  public yearList = AppConst.yearList;
+  public stateList: string[] = Object.keys(AppConst.usStates);
+  public selectedBook: Book;
   
-  private userShippingList: UserShipping[] = [];
-  private userPaymentList: UserPayment[] = [];
-  private cartItemList: CartItem[] = [];
-  private cartItemNumber: number;
+  public userShippingList: UserShipping[] = [];
+  public userPaymentList: UserPayment[] = [];
+  public cartItemList: CartItem[] = [];
+  public cartItemNumber: number;
   
-  private shoppingCart: ShoppingCart = new ShoppingCart();
-  private cartItemUpdated: boolean;
-  private userPayment: UserPayment = new UserPayment();
-  private userBilling: UserBilling = new UserBilling();
-  private userShipping: UserShipping = new UserShipping();
-  private payment: UserPayment = new UserPayment();
-  private billingAddress: UserBilling = new UserBilling();
-  private shippingAddress: UserShipping = new UserShipping();
+  public shoppingCart: ShoppingCart = new ShoppingCart();
+  public cartItemUpdated: boolean;
+  public userPayment: UserPayment = new UserPayment();
+  public userBilling: UserBilling = new UserBilling();
+  public userShipping: UserShipping = new UserShipping();
+  public payment: UserPayment = new UserPayment();
+  public billingAddress: UserBilling = new UserBilling();
+  public shippingAddress: UserShipping = new UserShipping();
   
-  private selectedTab: number;
-  private emptyShippingList = true;
-  private emptyPaymentList = true;
-  private shippingMethod: string;
-  private order: Order = new Order();
+  public selectedTab: number;
+  public emptyShippingList = true;
+  public emptyPaymentList = true;
+  public shippingMethod: string;
+  public order: Order = new Order();
   
   constructor(private router: Router, private cartService: CartService, private shippingService: ShippingService, private paymentService: PaymentService, private checkoutService: CheckoutService) { }
 

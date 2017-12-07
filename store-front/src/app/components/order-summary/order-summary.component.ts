@@ -12,10 +12,10 @@ import { CheckoutService } from '../../services/checkout.service';
 })
 export class OrderSummaryComponent implements OnInit {
 
-  private serverPath = AppConst.serverPath;
-  private order: Order = new Order();
-  private estimatedDeliveryDate: string;
-  private cartItemList: CartItem[] = [];
+  public serverPath = AppConst.serverPath;
+  public order: Order = new Order();
+  public estimatedDeliveryDate: string;
+  public cartItemList: CartItem[] = [];
   
   constructor(private router: Router, private route: ActivatedRoute, private checkoutService: CheckoutService) { }
 

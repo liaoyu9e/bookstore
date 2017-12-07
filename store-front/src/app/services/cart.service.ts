@@ -6,7 +6,7 @@ import { AppConst } from '../constants/app-const';
 @Injectable()
 export class CartService {
 
-  private serverPath = AppConst.serverPath;
+  public serverPath = AppConst.serverPath;
   
   constructor(private http: Http) { }
   

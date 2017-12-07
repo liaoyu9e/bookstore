@@ -19,37 +19,37 @@ import { OrderService } from '../../services/order.service';
 })
 export class MyProfileComponent implements OnInit {
 
-  private yearList = AppConst.yearList;
-  private serverPath = AppConst.serverPath;
-  private dataFetched = false;
-  private loginError: boolean;
-  private loggedIn: boolean;
-  private credential = {'username':'', 'password':''};
+  public yearList = AppConst.yearList;
+  public serverPath = AppConst.serverPath;
+  public dataFetched = false;
+  public loginError: boolean;
+  public loggedIn: boolean;
+  public credential = {'username':'', 'password':''};
   
-  private user: User = new User();
-  private updateSuccess: boolean;
-  private newPassword: string;
-  private incorrectPassword: boolean;
+  public user: User = new User();
+  public updateSuccess: boolean;
+  public newPassword: string;
+  public incorrectPassword: boolean;
   
-  private passwordMatched: boolean = true;
+  public passwordMatched: boolean = true;
   
-  private selectedProfileTab: number = 0;
-  private selectedBillingTab: number = 0;
-  private selectedShippingTab: number = 0;
-  private userPayment: UserPayment = new UserPayment();
-  private userBilling: UserBilling = new UserBilling();
-  private userShipping: UserShipping = new UserShipping();
-  private order: Order = new Order();
-  private userPaymentList: UserPayment[] = [];
-  private userShippingList: UserShipping[] = [];
-  private orderList: Order[] = [];
-  private displayOrderDetail: boolean;
-  private defaultPaymentSet: boolean;
-  private defaultShippingSet: boolean;
-  private defaultUserPaymentId: number;
-  private defaultUserShippingId: number;
+  public selectedProfileTab: number = 0;
+  public selectedBillingTab: number = 0;
+  public selectedShippingTab: number = 0;
+  public userPayment: UserPayment = new UserPayment();
+  public userBilling: UserBilling = new UserBilling();
+  public userShipping: UserShipping = new UserShipping();
+  public order: Order = new Order();
+  public userPaymentList: UserPayment[] = [];
+  public userShippingList: UserShipping[] = [];
+  public orderList: Order[] = [];
+  public displayOrderDetail: boolean;
+  public defaultPaymentSet: boolean;
+  public defaultShippingSet: boolean;
+  public defaultUserPaymentId: number;
+  public defaultUserShippingId: number;
   
-  private stateList: string[] = Object.keys(AppConst.usStates);
+  public stateList: string[] = Object.keys(AppConst.usStates);
   
   constructor(private loginService: LoginService, private userService: UserService, private paymentService: PaymentService, private shippingService: ShippingService, private orderService: OrderService, private router: Router) { }
   

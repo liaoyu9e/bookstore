@@ -11,9 +11,9 @@ import { BookService } from '../../services/book.service';
 })
 export class NavBarComponent implements OnInit {
 
-  private loggedIn: boolean = false;
-  private keyword: string;
-  private bookList: Book[] = [];
+  public loggedIn: boolean = false;
+  public keyword: string;
+  public bookList: Book[] = [];
   
   constructor(private loginService: LoginService, private bookService: BookService, private router: Router) { }
   
