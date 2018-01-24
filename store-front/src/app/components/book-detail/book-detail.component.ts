@@ -46,6 +46,7 @@ export class BookDetailComponent implements OnInit {
 	  this.bookService.getBook(this.bookId).subscribe(
 		res => {
 			this.book = res.json();
+			console.log(res.json());
 			this.book.publicationDate = new Date(this.book.publicationDate).toISOString().slice(0,10);
 			if(this.book.inStockNumber < 9){
 				this.numberList = this.numberList.filter(num => num <= this.book.inStockNumber);

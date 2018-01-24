@@ -67,8 +67,6 @@ public class UserServiceImp implements UserService {
         if(localUser != null){
             LOG.info("User with username {} already exists. Nothing will be done!", user.getUsername());
         }else{
-            localUser = userRepository.save(user);
-
             user.setUserPaymentList(new ArrayList<UserPayment>());
 
             user.setUserShippingList(new ArrayList<UserShipping>());
@@ -77,6 +75,8 @@ public class UserServiceImp implements UserService {
             shoppingCart.setUser(user);
             shoppingCart.setCartItemList(new ArrayList<CartItem>());
             user.setShoppingCart(shoppingCart);
+
+            localUser = userRepository.save(user);
         }
         return localUser;
     }
